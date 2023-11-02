@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Head from "next/head";
 import "./global.css";
 import DetailsProvider from "../context/DetailsContext.jsx";
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }) {
       <DetailsProvider>
         <Component {...pageProps}/>
       </DetailsProvider>
+      <Analytics />
     </Fragment>
   );
 }
