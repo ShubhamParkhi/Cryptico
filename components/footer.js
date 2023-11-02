@@ -48,6 +48,7 @@ const Footer = () => {
               <Link
                 className="cursor-pointer [text-decoration:none] text-[inherit]"
                 href="https://shubhamparkhi.vercel.app/"
+                target="_blank"
               >
                 Developer
               </Link>
