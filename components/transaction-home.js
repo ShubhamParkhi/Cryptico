@@ -28,45 +28,45 @@ const TransactionHome = () => {
             Amount
           </div>
           <div className="flex-1 rounded flex flex-col items-center justify-start p-2.5 border-[1px] border-solid border-gainsboro-200">
-            Timestamp
+            Timestamp                  
           </div>
-          {transactions &&
+        </div>
+      {transactions &&
             transactions.map((transaction, idx) => (
               <div className="w-full flex-1 flex items-start justify-center gap-[20px] sm:flex-col">
-                <div className="flex-1 rounded flex flex-col items-center justify-center p-2.5 border-[1px] border-solid border-gainsboro-200">
-                  <a
-                    href={`https://sepolia.etherscan.io/address/${transaction.sender}`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {makeItShort(transaction.sender)}
-                  </a>
-
-                </div>
-                <div className="flex-1 rounded flex flex-col items-center justify-start p-2.5 border-[1px] border-solid border-gainsboro-200">
-                  <a
-                    href={`https://sepolia.etherscan.io/address/${transaction.receiver}`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {makeItShort(transaction.receiver)}
-                  </a>
-                </div>
-                <div className="flex-1 rounded flex flex-col items-center justify-start p-2.5 border-[1px] border-solid border-gainsboro-200">
-                  {transaction.message}
-                </div>
-                <div className="flex-1 rounded flex flex-col items-center justify-start p-2.5 border-[1px] border-solid border-gainsboro-200">
-                  {parseInt(transaction.amount._hex) / 10 ** 18}
-                </div>
-                <div className="flex-1 rounded flex flex-col items-center justify-start p-2.5 border-[1px] border-solid border-gainsboro-200">
-                  {new Date(
-                    transaction.timestamp.toNumber() * 1000
-                  ).toLocaleString()}
-                </div>
+              <div className="flex-1 rounded flex flex-col items-center justify-center p-2.5 border-[1px] border-solid border-gainsboro-200">
+                <a
+                  href={`https://sepolia.etherscan.io/address/${transaction.sender}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {makeItShort(transaction.sender)}
+                </a>
+    
               </div>
-
-            ))}
-        </div>
+              <div className="flex-1 rounded flex flex-col items-center justify-start p-2.5 border-[1px] border-solid border-gainsboro-200">
+                <a
+                  href={`https://sepolia.etherscan.io/address/${transaction.receiver}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {makeItShort(transaction.receiver)}
+                </a>
+              </div>
+              <div className="flex-1 rounded flex flex-col items-center justify-start p-2.5 border-[1px] border-solid border-gainsboro-200">
+              {transaction.message}
+              </div>
+              <div className="flex-1 rounded flex flex-col items-center justify-start p-2.5 border-[1px] border-solid border-gainsboro-200">
+              {parseInt(transaction.amount._hex) / 10 ** 18}
+              </div>
+              <div className="flex-1 rounded flex flex-col items-center justify-start p-2.5 border-[1px] border-solid border-gainsboro-200">
+                {new Date(
+                  transaction.timestamp.toNumber() * 1000
+                ).toLocaleString()}
+              </div>
+            </div>
+    
+              ))}
       </div>
     </div>
   );
