@@ -13,7 +13,7 @@ const TransactionHome = () => {
       <div className="text-29xl">
         Transactions
       </div>
-      <div className="w-full rounded-6xl [background:linear-gradient(0.03deg,_rgba(8,_46,_5,_0.13),_rgba(3,_12,_28,_0.5)_65.77%)] shadow-[0px_0px_100px_rgba(255,_255,_255,_0.05)] flex flex-col items-start justify-between py-[50px] px-[30px] box-border max-w-[1440px] text-lg">
+      <div className="w-full rounded-6xl [background:linear-gradient(0.03deg,_rgba(8,_46,_5,_0.13),_rgba(3,_12,_28,_0.5)_65.77%)] shadow-[0px_0px_100px_rgba(255,_255,_255,_0.05)] flex flex-col items-start justify-between gap-[20px] py-[50px] px-[30px] box-border max-w-[1440px] text-lg">
         <div className="w-full flex-1 flex items-start justify-center gap-[20px] sm:flex-col">
           <div className="flex-1 rounded flex flex-col items-center justify-center p-2.5 border-[1px] border-solid border-gainsboro-200">
             Sender’s Adderess
