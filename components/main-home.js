@@ -6,7 +6,7 @@ const MainHome = () => {
     useContext(DetailsContext);
   return (
     <div className="self-stretch flex items-center justify-center py-[100px] px-[30px]">
-      <div className="w-full flex-1 flex items-center justify-between max-w-[1440px] sm:flex-col sm:gap-[20px]">
+      <div className="w-full flex-1 flex items-center justify-between max-w-[1440px] flex-row sm:flex-col sm:gap-[20px]">
         <div className="w-full max-w-[600px] flex flex-col items-start justify-center gap-[50px]">
           <div className="flex flex-col items-start justify-center gap-[25px]">
             <div className="text-29xl">
