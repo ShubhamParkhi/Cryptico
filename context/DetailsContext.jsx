@@ -22,7 +22,6 @@ const DetailsProvider = ({ children }) => {
       contractABI,
       signer
     );
-
     return transactionContract;
   };
 
