@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 export const DetailsContext = createContext();
 import { contractAddress, contractABI } from "../utils/Contract";
-import { ToastContainer, toast } from 'react-toastify';
+import toast from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const DetailsProvider = ({ children }) => {
