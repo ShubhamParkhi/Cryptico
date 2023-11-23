@@ -1,7 +1,7 @@
 const ReassuranceHome = () => {
   return (
     <div className="self-stretch flex items-center justify-center py-[100px] px-[30px]">
-      <div className="w-full flex-1 flex items-center justify-between max-w-[1440px] flex-row sm:flex-col gap-[50px]">
+      <div className="w-full flex-1 flex items-center justify-between max-w-[1440px] sm:flex-col gap-[50px]">
         <div className="max-w-[600px] flex flex-col items-start gap-[25px] justify-center">
             <div className="text-29xl">
               Service that I’ll continue to improve
