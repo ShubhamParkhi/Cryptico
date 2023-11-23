@@ -2,6 +2,8 @@ import React, { createContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 export const DetailsContext = createContext();
 import { contractAddress, contractABI } from "../utils/Contract";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const DetailsProvider = ({ children }) => {
   const [account, setAccount] = useState("");
@@ -34,17 +36,44 @@ const DetailsProvider = ({ children }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!Data.receiverAddress || !Data.amount || !Data.message) {
-      alert("Please fill all the fields");
+      toast.error('Please fill out all the fields!', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       return;
     }
 
     if (!account) {
-      alert("Please connect your wallet");
+      toast.error('Please connect your wallet!', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       return;
     }
 
     if (!window.ethereum) {
-      alert("Install Metamask");
+      toast.error('Please install Metamask!', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       return;
     }
 
@@ -82,7 +111,16 @@ const DetailsProvider = ({ children }) => {
   const getTransactionHistory = async () => {
     try {
       if (!window.ethereum) {
-        alert("Install Metamask");
+        toast.error('Please install Metamask!', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         return;
       }
 
@@ -98,7 +136,16 @@ const DetailsProvider = ({ children }) => {
   const checkIfWalletIsconnected = async () => {
     try {
       if (!window.ethereum) {
-        alert("Install Metamask");
+        toast.error('Please install Metamask!', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         return;
       }
       const accounts = await window.ethereum.request({
@@ -120,7 +167,16 @@ const DetailsProvider = ({ children }) => {
   const connectWallet = async () => {
     try {
       if (!window.ethereum) {
-        alert("Install Metamask");
+        toast.error('Please install Metamask!', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         return;
       }
       const accounts = await window.ethereum.request({
