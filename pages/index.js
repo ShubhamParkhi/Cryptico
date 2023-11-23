@@ -3,6 +3,7 @@ import MainHome from "../components/main-home";
 import InstructionsHome from "../components/instructions-Home";
 import ReassuranceHome from "../components/reassurance-home";
 import TransactionHome from "../components/transaction-home";
+import ToastContainer from 'react-toastify';
 import Footer from "../components/footer";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <ReassuranceHome />
       <TransactionHome />
       <Footer />
+      <ToastContainer />
     </div>
   );
 };
