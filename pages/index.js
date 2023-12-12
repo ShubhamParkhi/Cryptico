@@ -4,6 +4,8 @@ import InstructionsHome from "../components/instructions-Home";
 import ReassuranceHome from "../components/reassurance-home";
 import TransactionHome from "../components/transaction-home";
 import Footer from "../components/footer";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
   return (
@@ -14,6 +16,7 @@ const Home = () => {
       <ReassuranceHome />
       <TransactionHome />
       <Footer />
+      <ToastContainer />
     </div>
   );
 };
