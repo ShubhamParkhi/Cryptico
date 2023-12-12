@@ -38,7 +38,7 @@ const Header = () => {
             </Link>
             {!account ? (
               <button className="cursor-pointer py-[15px] px-5 bg-[transparent] rounded-lg border-[1px] border-solid border-darkslategray-100 text-lg font-inter text-text-color text-center hover:bg-hover" onClick={connectWallet}>
-                LOGIN
+                CONNECT WALLET
               </button>
             ) : null}
           </div>

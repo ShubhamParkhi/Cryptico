@@ -112,10 +112,6 @@ const DetailsProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    checkIfWalletIsconnected();
-  }, []);
-
   const connectWallet = async () => {
     try {
       if (!window.ethereum) {

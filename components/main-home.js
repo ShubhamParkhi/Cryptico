@@ -2,8 +2,7 @@ import { DetailsContext } from "../context/DetailsContext";
 import React, { useContext } from "react";
 
 const MainHome = () => {
-  const { connectWallet, account, handleChange, handleSubmit, isLoading } =
-    useContext(DetailsContext);
+  const { connectWallet, account, handleChange, handleSubmit, isLoading } = useContext(DetailsContext);
   return (
     <div className="self-stretch flex items-center justify-center py-[100px] px-[30px]">
       <div className="w-full flex-1 flex items-center justify-between max-w-[1440px] flex-row sm:flex-col sm:gap-[20px]">
