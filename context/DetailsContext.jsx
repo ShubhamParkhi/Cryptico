@@ -1,9 +1,9 @@
 import React, { createContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
-export const DetailsContext = createContext();
 import { contractAddress, contractABI } from "../utils/Contract";
 import { toast } from 'react-toastify';
 
+export const DetailsContext = createContext();
 
 const DetailsProvider = ({ children }) => {
   const [account, setAccount] = useState("");
